@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FUTBOL DB</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header">
+        <h1>BASE DE EQUIPOS V REGION</h1>
+    </div>
+
+    <div id="main">
+        <div class="contenedor-panel">
+            <div class="row">
+                <label id="equipotext">Equipo:</label>
+                <select id="team" onchange="renderJugadores()">
+                        <!-- <option value="F">Paciente</option> -->
+                </select>
+
+                <div id="div-añadir-equipo" style="display: flex;">
+                    <form action="">
+                        <input type="text" id="input-equipo" placeholder="Nombre Equipo">
+                        
+                        <input type="text" id="form-pobla" placeholder="Población">
+                        <input type="text" id="form-capitan" placeholder="Capitan">
+                    </form>
+                    <button onclick="agregarEquipo()">Añadir Equipo</button>
+                </div>
+
+
+
+            </div>
+            <div class="row">
+                <label>Jugador:</label>
+                <input type="text" id="jugador" >
+                <button id="searchBtn">Buscar</button>
+                <button id="searchBtn" class="btnForm" onclick="mostrarForm()">Añadir</button>
+            </div>
+
+            <!-- Este div debería aparecer y desaparecer cambiando atributo hidden al presionar el boton añadir -->
+            <div id="div-añadir-jugador">
+                <form action="">
+                    <input type="text" id="form-nombre" placeholder="Nombre" required>
+                    <input type="text" id="form-rut" placeholder="RUT">
+                    <input type="text" id="form-nacimiento" placeholder="Año de Nacimiento">
+                </form>
+                <button type="submit" onclick="agregarJugador()">Añadir Nuevo</button>
+            </div>
+        </div>
+        <div id="contenedor-lista-jugadores">
+            
+        </div>
+        </div>
+    </div>
+
+
+    <script src="js/lib/jquery-3.6.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/index2.js"></script>
+
+</body>
+
+</html>
